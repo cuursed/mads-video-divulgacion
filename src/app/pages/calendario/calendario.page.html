@@ -1,0 +1,7 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tareas Semanales</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-calendar [(ngModel)]="date" (onChange)="onDateSelected($event)"></ion-calendar>

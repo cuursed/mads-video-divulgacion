@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tareas Pendientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-list>
+  <ion-reorder-group (ionItemReorder)="reorderTasks($event)">
+    <ion-item *ngFor="let task of tasks" [class]="task.priority">
+      <ion-label>{{ task.title }}</ion-label>
+      <ion-reorder slot="end"></ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+</ion-list>
